@@ -9,6 +9,8 @@
   "author": "Ajay",
   "license": "MIT",
   "dependencies": {
+    "cors": "^2.8.0",
+    "express": "^4.14.0",
     "request": "^2.60.0"
   }
 }
