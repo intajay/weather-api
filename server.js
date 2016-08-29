@@ -11,7 +11,6 @@ app.use(cors());
 
 app.get('/', function(req, res) {
 	var ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
-	console.log(ip);
 
 	location(ip, function(location) {
 		if (!location) {
@@ -20,7 +19,6 @@ app.get('/', function(req, res) {
 		}
 		weather(location, function(currentWeather) {
 			res.json(currentWeather);
-			console.log(currentWeather);
 		});
 	});
 });
