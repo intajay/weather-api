@@ -1,0 +1,14 @@
+{
+  "name": "weather-api",
+  "version": "1.0.0",
+  "description": "Weather API with IP geolocation",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ajay",
+  "license": "MIT",
+  "dependencies": {
+    "request": "^2.60.0"
+  }
+}
