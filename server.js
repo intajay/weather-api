@@ -10,8 +10,10 @@ var server_port = process.env.PORT || 8080;
 app.use(cors());
 
 app.get('/', function(req, res) {
+	var ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+	console.log(ip);
 
-	location(function(location) {
+	location(ip, function(location) {
 		if (!location) {
 			res.json('Unable to locate');
 			return;

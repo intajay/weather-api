@@ -1,11 +1,8 @@
 var request = require('request');
 
-var ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
-var url = 'http://ip-api.com/json/' + ip;
-
-module.exports = function(callback) {
+module.exports = function(ip, callback) {
     request({
-        url: url,
+        url: 'http://ip-api.com/json/' + ip,
         json: true
     }, function(error, response, body) {
         if (error) {
